@@ -47,7 +47,7 @@ class Consumer
             $ext = $fileinfo->getExtension();
             if ($ext === 'php') {
                 $class = str_replace('/', "\\", substr(substr($file, strlen(base_path())), 0, -4));
-                if (!is_a($class, 'Webman\Stomp\Consumer', true)) {
+                if (!is_a($class, 'ssh\Stomp\Consumer', true)) {
                     continue;
                 }
                 $consumer = Container::get($class);
