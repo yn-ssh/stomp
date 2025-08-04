@@ -10,7 +10,8 @@
     }
   ],
   "require": {
-    "php": ">=7.4"
+    "php": ">=7.4",
+    "workerman/stomp": "dev-main"
   },
   "autoload": {
     "psr-4": {
@@ -19,4 +20,3 @@
   },
   "minimum-stability": "dev"
 }
-
