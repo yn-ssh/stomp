@@ -54,7 +54,8 @@ class Consumer
                 $connection_name = $consumer->connection ?? 'default';
                 $queue = $consumer->queue;
                 $ack   = $consumer->ack ?? 'auto';
-                $connection = Client::connection($connection_name);
+                $config=$consumer->config??'';
+                $connection = Client::connection($connection_name,$config);
                 $cb = function ($client, $package, $ack) use ($consumer) {
                     \call_user_func([$consumer, 'consume'], $package['body'], $ack, $client);
                 };

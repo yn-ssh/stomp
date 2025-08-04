@@ -83,7 +83,10 @@ class Client
         if (!isset(static::$_connections[$name])) {
             if(empty($config)){
                 $config = config('stomp', config('plugin.webman.stomp.stomp', []));
+            }else{
+                $config = config($config, []);
             }
+
             if (!isset($config[$name])) {
                 throw new \RuntimeException("Stomp connection $name not found");
             }
