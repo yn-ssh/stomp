@@ -1,5 +1,6 @@
 .idea/
 .composer.lock
+composer.lock
 .DS_Store
 src/.DS_Store
 vendor/
