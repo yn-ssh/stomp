@@ -1,0 +1,10 @@
+{
+  "name": "ssh/stomp",
+  "description": "Stomp client written in PHP for webman.",
+  "require": {
+    "ssh/stomp": "^1.0"
+  },
+  "autoload": {
+    "psr-4": {"ssh\\Stomp\\": "./src"}
+  }
+}
