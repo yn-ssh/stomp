@@ -1,9 +1,22 @@
 {
   "name": "ssh/stomp",
-  "description": "Stomp client written in PHP for webman.",
+  "description": "stomp",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "ssh",
+      "email": "694711507@qq.com"
+    }
+  ],
   "require": {
+    "php": ">=7.4"
   },
   "autoload": {
-    "psr-4": {"ssh\\Stomp\\": "./src"}
-  }
+    "psr-4": {
+      "ssh\\Stomp\\": "src/"
+    }
+  },
+  "minimum-stability": "dev"
 }
+
