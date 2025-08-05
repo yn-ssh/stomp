@@ -14,5 +14,5 @@ namespace ssh\Stomp;
  */
 interface Consumer
 {
-    public function consume($data);
+    public function consume($data,$headers);
 }

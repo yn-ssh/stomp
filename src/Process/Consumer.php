@@ -57,7 +57,7 @@ class Consumer
                 $config=$consumer->config??'';
                 $connection = Client::connection($connection_name,$config);
                 $cb = function ($client, $package, $ack) use ($consumer) {
-                    \call_user_func([$consumer, 'consume'], $package['body'], $ack, $client);
+                    \call_user_func([$consumer, 'consume'], $package['body'],$package['headers'], $ack, $client);
                 };
                 $connection->subscribe($queue, $cb, ['ack' => $ack]);
                 /*if ($connection->getState() == StompClient::STATE_ESTABLISHED) {
